@@ -1,0 +1,152 @@
+.main-content-section {
+    position: relative;
+    padding-left: 224px;
+    .primary-navigation {
+        top: 70px;
+        left: 0;
+        width: 224px;
+        bottom: 0;
+        position: fixed;
+        overflow: auto;
+        padding-bottom: 116px;
+        background-color: $white;
+        .nav {
+            width: 100%;
+            border: 0;
+            display: block;
+            position: relative;
+            .nav-item {
+                margin: 0;
+                > .nav-link.nav-opened{
+                    position: relative;
+                    background-color: $secondary-bg ;
+                    &::after{
+                        top: 0;
+                        left: 0;
+                        width: 6px;
+                        bottom: 0;
+                        height: 100%;
+                        content: "";
+                        position: absolute;
+                        background-color: $brand-secondary;
+                    }
+                    > small{
+                        color: $brand-secondary;
+                        @include transform(translateY(-50%) rotate(180deg));
+                    }
+                    > i{
+                        color: $brand-secondary;
+                    }
+                    > span{
+                        color: $brand-secondary;
+                        @extend .robotoslab-bold;
+                    }
+                }
+                .nav-link {
+                    color: #333;
+                    border: 0;
+                    height: 50px;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    padding-left: 60px;
+                    border-radius: 0;
+                    background-color: $white;
+                    &:hover {
+                        border: 0;
+                        cursor: pointer;
+                    }
+                    + div{
+                        > .nav-link{
+                            padding-left: 35px;
+                        }
+                    }
+                    &.active {
+                        border: 0;
+                        background-color: $primary-bg;
+                        > i{
+                            color: $brand-primary;
+                        }
+                        > span{
+                            color: $brand-primary;
+                            @extend .robotoslab-bold;
+                        }
+                        &::after{
+                            top: 0;
+                            left: 0;
+                            width: 6px;
+                            bottom: 0;
+                            height: 100%;
+                            content: "";
+                            position: absolute;
+                            background-color: $brand-primary;
+                        }
+                    }
+                    > small{
+                        top: 50%;
+                        left: 13px;
+                        color: $grey;
+                        position: absolute;
+                        font-size: 10px;
+                        line-height: 4px;
+                        @include transform(translateY(-50%) rotate(0deg));
+                        @include transition(all 0.3s ease-in-out);
+                    }
+                    > i {
+                        top: 50%;
+                        left: 24px;
+                        color: $grey;
+                        position: absolute;
+                        font-size: 18px;
+                        margin-right: 12px;
+                        @include translate(0, -50%);
+                        @include transition(all 0.3s ease-in-out);
+                    }
+                    > span{
+                        color: $grey;
+                        font-size: 14px;
+                        line-height: 1.43;
+                        letter-spacing: 0.2px;
+                        @extend .robotoslab-regular;
+                    }
+                }
+            }
+        }
+        .cypress-copy-wrapper{
+            left: 0;
+            right: 0;
+            width: 224px;
+            bottom: 0;
+            position: fixed;
+            padding: 14px 0 14px 25px;
+            background-color: $white;
+            a{
+                color: $grey3;
+                font-size: 12px;
+                @include transition(all 0.3s ease);
+                @extend .lato-regular;
+                &:hover{
+                    text-decoration: none;
+                    color: $grey2;
+                }
+                &:last-child{
+                    color: #333;
+                    margin-top: 16px;
+                    letter-spacing: 0.2px;
+                    &:hover{
+                        opacity: 0.8;
+                    }
+                }
+            }
+        }
+    }
+    .primary-navigation-content{
+        > .tab-content{
+            overflow: auto;
+            min-height: calc(100vh - 70px);
+            > .tab-pane{
+                padding: 0 40px;
+            }
+        }
+    }
+}

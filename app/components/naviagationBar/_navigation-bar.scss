@@ -1,0 +1,101 @@
+.navigation-bar{
+    top: 0;
+    width: calc(100%);
+    z-index: 9;
+    position: fixed;
+    background-color: $white;
+    .custom-container{
+        padding: 0 40px 0 0;
+        @media (max-width: 991px) {
+            padding: 0 16px 0 0;
+        }
+        .custom-navbrand{
+            width: 224px;
+            height: 70px;
+            border: solid 1px $white-smoke;
+            .toggle-navigation{
+                margin: 0 18.4px 0 25.2px;
+                .hamburger{
+                    display: inline-block;
+                    small{
+                        width: 16px;
+                        height: 2px;
+                        background-color: $black;
+                        display: block;
+                        &:not(:last-child){
+                            margin-bottom: 3px;
+                        }
+                    }
+                }
+            }
+            .navbar-brand{
+                color: #333;
+                font-size: 1rem;
+                @extend .robotoslab-bold;
+            }
+        }
+        .navigation-search-wrapper{
+            .advanced-search-wrapper{
+                > a{
+                    width: 182px;
+                    height: 70px;
+                    display: flex;
+                    align-items: center;
+                    border-left: 1px solid $gainsboro;
+                    border-right: 1px solid $gainsboro;
+                    justify-content: center;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    span{
+                        color: $brand-secondary;
+                        font-size: 14px;
+                        line-height: 14px;
+                    }
+                    i{
+                        color: $brand-secondary;
+                        font-size: 12px;
+                        margin-left: 7px;
+                        line-height: 5px;
+                    }
+                }
+            }
+        }
+        .toggle-profile-wrapper{
+            .toggle-profile{
+                > i{
+                    color: $brand-secondary;
+                }
+            }
+        }
+        .navbar-collapse{
+            @media (max-width: 991px) {
+                height: auto !important;
+                position: relative;
+                .navbar-right-wrapper{
+                    right: 0;
+                    position: absolute;
+                }
+            }
+            .navbar-right-wrapper{
+                .help-wrapper{
+                    height: 70px;
+                    margin-right: 34px;
+                    &:hover{
+                        text-decoration: none;
+                    }
+                    > i{
+                        color: #333;
+                        font-size: 18px;
+                        margin-right: 5px;
+                    }
+                    span{
+                        color :#333;
+                        font-size: 14px;
+                        @extend .lato-regular;
+                    }
+                }
+            }
+        }
+    }
+}

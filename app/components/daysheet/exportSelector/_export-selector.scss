@@ -1,0 +1,64 @@
+.export-selector-wrapper{
+    .dropdown{
+        > button{
+            height: 44px;
+            border: 1px solid $table-border-color !important;
+            display: flex;
+            position: relative;
+            font-size: 14px;
+            min-width: 167px;
+            align-items: center;
+            justify-content: center;
+            background-color: transparent !important;
+            @include box-shadow(none !important);
+            @include border-radius(0);
+            @extend .lato-regular;
+            > span{
+                color: $brand-secondary;
+            }
+            > i{
+                color: $brand-secondary;
+                font-size: 6px;
+                line-height: 6px;
+                margin-left: 12px;
+            }
+        }
+        .dropdown-menu{
+            top: calc(100% + 11px) !important;
+            left: 50%  !important;
+            width: 100%;
+            border: 1px solid $table-border-color;
+            padding: 0 3px;
+            max-width: 160px;
+            margin-top: 0;
+            background-color: $white;
+            @include border-radius(0);
+            @include transform(translateX(-50%) !important);
+            > button{
+                width: 100%;
+                color: $grey1;
+                border: 0;
+                height: 45px;
+                cursor: pointer;
+                display: block;
+                padding: 0 14px;
+                overflow: hidden;
+                font-size: 12px;
+                align-items: center;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                letter-spacing: 0.2px;
+                justify-content: flex-start;
+                background-color: transparent !important;
+                @extend .robotoslab-regular;
+                @include transition(all 0.3s ease);
+                &:hover{
+                    opacity: 0.6;
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid $table-border-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+// Bootstrap Styles
+@import 'node_modules/bootstrap/scss/bootstrap';
+
+// import global styles
+@import './assets/styles/_fonts.scss';
+@import './assets/styles/_color.scss';
+@import './assets/styles/_mixins.scss';
+@import './assets/styles/_common.scss';
+
+// Layout UI
+@import './components/naviagationBar/_navigation-bar.scss';
+@import './components/naviagationBar/search/_search.scss';
+@import './components/naviagationBar/search/_search.scss';
+@import './components/naviagationBar/user/_user.scss';
+
+@import './components/mainContent/_main-content.scss';
+
+@import './components/homepage/_homepage.scss';
+@import './components/Login/Login.scss';
+
+@import './components/AllCalls/CallsGrid/CallsGrid.scss';
+@import './components/AllCalls/AllCalls.scss';
+@import './components/Dashboard/Dashboard.scss';
+@import './components/Dashboard/DashboardHeader/DashboardHeader.scss';
+@import './components/NewCall/NewCall.scss';
+@import './components/Dashboard/Dashboard.scss';
+@import './components/CaseInfo/CaseInfo.scss'

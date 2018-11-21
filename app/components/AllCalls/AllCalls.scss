@@ -1,0 +1,19 @@
+.allcalls-section {
+    background-color: $primary-bg;
+    padding: 1.25rem 0 8.375rem 0;
+    @extend .lato-regular;
+    h1 {
+        margin: 0.25rem 0 1.25rem 0;
+    }
+    .header-wrapper {
+        i.fa-archive {
+            display: none;
+        }
+        .show-selected-checkbox {
+            width: calc(100% - 47px);
+        }
+    }
+    .Location-dropdown {
+        display: none;
+    }
+}

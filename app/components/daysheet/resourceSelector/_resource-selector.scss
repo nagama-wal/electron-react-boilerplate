@@ -1,0 +1,113 @@
+.resource-selector-wrapper{
+    position: relative;
+    margin-right: -1px;
+    > button{
+        height: 44px;
+        border: 1px solid $table-border-color !important;
+        display: flex;
+        position: relative;
+        font-size: 14px;
+        min-width: 167px;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent !important;
+        @include box-shadow(none !important);
+        @include border-radius(0);
+        @extend .lato-regular;
+        > span{
+            color: $brand-secondary;
+        }
+        > i{
+            color: $brand-secondary;
+            font-size: 6px;
+            line-height: 6px;
+            margin-left: 12px;
+        }
+    }
+    .resource-collapse{
+        top: calc(100% + 11px);
+        left: 50%;
+        width: 100%;
+        border: 1px solid $table-border-color;
+        padding: 0 3px;
+        position: absolute;
+        max-width: 160px;
+        background-color: $white;
+        @include transform(translateX(-50%) !important);
+        .resource-form{
+            > .form-group{
+                margin: 0;
+                input{
+                    width: 100%;
+                    border: 0;
+                    height: 45px;
+                    padding: 0 14px;
+                    font-size: 12px;
+                    letter-spacing: 0.2px;
+                    border-bottom: 1px solid $table-border-color;
+                    @extend .robotoslab-regular;
+                }
+            }
+            .resource-list-group{
+                margin: 0;
+                .resource-list{
+                    &:first-child{
+                        .resource-name{
+                            color: $brand-primary;
+                        }
+                        .custom-check{
+                            .checkbox-inline{
+                                input[type="checkbox"]{
+                                    &:checked + span{
+                                        border-color: $brand-primary;
+                                        background-color: $brand-primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    &:nth-child(2){
+                        .resource-name{
+                            color: $brand-secondary;
+                        }
+                        .custom-check{
+                            .checkbox-inline{
+                                input[type="checkbox"]{
+                                    &:checked + span{
+                                        border-color: $brand-secondary;
+                                        background-color: $brand-secondary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    padding: 0 14px;
+                    &:not(:last-child){
+                        border-bottom: 1px solid $table-border-color;
+                    }
+
+                    height: 45px;
+                    span{
+                        font-size: 12px;
+                        letter-spacing: 0.2px;
+                        @extend .robotoslab-regular;
+                    }
+                    .custom-check{
+                        margin: 0;
+                        .checkbox-inline{
+                            margin: 0;
+                            span{
+                                margin: 0;
+                                @include border-radius(50%);
+                                i{
+                                    font-size: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

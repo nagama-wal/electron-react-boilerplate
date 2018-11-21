@@ -1,0 +1,10 @@
+.Location-dropdown{
+    .select-wrapper .select-dropdown__control 
+    .select-dropdown__placeholder, .select-wrapper .select-dropdown__control 
+    .select-dropdown__single-value,.select-wrapper .select-dropdown__control 
+    .select-dropdown__value-container .select-dropdown__input input
+        {
+            color: $brand-primary;
+    }
+   
+}

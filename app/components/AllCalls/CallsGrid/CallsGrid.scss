@@ -1,0 +1,88 @@
+.allcalls-container {
+    overflow-y: auto;
+}
+.actions-with-pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: 1px solid $table-border-color;
+    border-top-width: 0;
+    background-color: $white;
+    height: 52px;
+    background-color: $white;
+    .actions {
+        span {
+            color: $brand-primary;
+            padding: 0 2.125rem;
+            @extend .lato-bold;
+
+            font-size: 0.875rem;
+            cursor: pointer;
+        }
+    }
+}
+.pagination-sm {
+    .page-item {
+        .page-link {
+            background-color: $secondary-bg;
+            color: #a2a1a1;
+            font-size: 1.5rem;
+            padding: 3px 12px;
+            span:first-child {
+            font-size: 0;
+            &::after {
+                font-size: 1.2rem;
+                font-family: "Font Awesome 5 Free";
+                font-weight: 900;
+                color: #a2a1a1;
+            }
+         }
+        }
+        &:first-child {
+         .page-link span:first-child {
+            &::after {
+                    content: "\f104";
+                 }
+             }
+        }
+        &:nth-child(2) {
+            .page-link span:first-child {
+            &::after {
+                content: "\f105";
+            }
+         }
+        }
+    }
+}
+.pagination-section {
+    color: $grey;
+    font-size: 0.6875rem;
+    padding-right: 1rem;
+    .light-grey {
+        color: #d1d1d1;
+        padding-right: 1rem;
+    }
+    .records-page {
+        padding: 0 1.188rem;
+    }
+    button {
+        border-radius: 2px;
+        border: solid 1px $table-border-color;
+        background-color: $secondary-bg;
+    }
+    nav {
+        display: inline-block;
+        ul {
+            margin: 0;
+        }
+    }
+    .page-item {
+        .page-link {
+            color: #a2a1a1;
+            font-size: 1rem
+        }
+    }
+}
+table tr td input, table tr td select {
+    width: 100px;
+}

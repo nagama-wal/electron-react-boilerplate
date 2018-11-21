@@ -1,0 +1,86 @@
+.user-section{
+    .dropdown{
+        .user-section-btn{
+            width: 170px;
+            height: 70px;
+            border: 1px solid $white-smoke;
+            border-top: 0;
+            border-bottom: 0;
+            background-color: $mint-cream !important;
+            @include border-radius(0);
+            @include box-shadow(none !important);
+            &:not(:disabled):not(.disabled):active{
+                border-color: $white-smoke !important;
+            }
+            > .user-image-wrapper{
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                margin-right: 9px;
+                background-color: $brand-secondary;
+                @include border-radius(1px);
+                > b{
+                    width: 24px;
+                    color: rgba(255,255,255,0.68);
+                    height: 24px;
+                    font-size: 1rem;
+                    @extend .lato-bold;
+                }
+                > img{
+                    width: 24px;
+                    height: 24px;
+                    object-fit: cover;
+                }
+            }
+            > .user-name{
+                color: #333;
+                font-size: 14px;
+                max-width: 100px;
+                @extend .text-ellipsis;
+                @extend .lato-regular;
+            }
+            > i{
+                color: #333;
+                font-size: 12px;
+                margin-left: 7px;
+                line-height: 5px;
+            }
+        }
+        .user-section-dropdownlists{
+            top: 100% !important;
+            left: auto !important;
+            right: 0;
+            width: 274px;
+            border: 1px solid $white-smoke;
+            padding: 0 5px;
+            margin-top: 6px;
+            @include transform(none !important);
+            @include border-radius(2px);
+            .user-section-dropdownlist{
+                width: 100%;
+                color: $grey1;
+                height: 58px;
+                display: flex;
+                font-size: 14px;
+                align-items: center;
+                padding-left: 24px;
+                letter-spacing: 0.2px;
+                @include transition(all 0.3s ease);
+                @extend .robotoslab-regular;
+                &.user-logout{
+                    color: $cinnabar;
+                    &:hover{
+                        color: $cinnabar2;
+                    }
+                }
+                &:hover{
+                    text-decoration: none;
+                    color: $grey2;
+                }
+                &:not(:last-child){
+                    border-bottom: 1px solid $white-smoke;
+                }
+            }
+        }
+    }
+}

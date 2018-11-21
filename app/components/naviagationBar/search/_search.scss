@@ -1,0 +1,28 @@
+.custom-search{
+    background-color: $snow;
+    .form-group{
+        margin: 0;
+        position: relative;
+        i{
+            top: 50%;
+            left: 44px;
+            color: $grey;
+            position: absolute;
+            font-size: 18px;
+            @include translate(0, -50%);
+        }
+        input{
+            width: 300px;
+            border: 0;
+            height: 70px;
+            padding-left: 73px;
+            @include placeholder-color($grey);            
+            @media (max-width: 900px){
+                width: 300px;
+            }
+            &:focus{
+                @include box-shadow(none);
+            }
+        }
+    }
+}

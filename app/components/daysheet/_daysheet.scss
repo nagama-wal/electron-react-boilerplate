@@ -1,0 +1,235 @@
+.daysheet-section{
+    position: relative;
+    .daysheet-custom-toolbars{
+        top: 0;
+        right: 0;
+        z-index: 1;
+        position: absolute;
+    }
+    .daysheet-wrapper {
+        height: calc(100vh - 70px - 97px);
+        background-color:  #f5f6fa;
+        position: relative;
+        *{
+            &:hover{
+                text-decoration: none;
+            }
+        }
+        .rbc-toolbar{
+            height: 44px;
+            border: 1px solid $table-border-color;
+            margin-bottom: 19px;
+            justify-content: flex-start;
+            background-color: $white;
+            .rbc-toolbar-label{
+                color: $grey;
+                font-size: 14px;
+                flex-grow: unset;
+                @include box-shadow(none);
+                @extend .lato-regular;
+            }
+            .rbc-btn-group{
+                &:first-of-type{
+                    display: flex;
+                    > button{
+                        border: 0;
+                        height: 44px;
+                        cursor: pointer;
+                        font-size: 14px;
+                        @include box-shadow(none);
+                        @include transition(all 0.3s ease-in-out);
+                        @extend .lato-regular;
+                        &:hover, &:focus{
+                            border: 0;
+                            opacity: 0.6;
+                            background-color: transparent;
+                        }
+                        &:first-child{
+                            order: 2;
+                            color: $grey;
+                        }
+                        &:nth-child(2){
+                            order: 1;
+                            width: 50px;
+                            color: $white;
+                            position: relative;
+                            &::after{
+                                top: 50%;
+                                left: 50%;
+                                color: $grey;
+                                content: '\f053';
+                                position: absolute;
+                                font-weight: 900;
+                                @include translate(-50%, -50%);
+                                @extend .custom-fontawesome;
+                            }
+                        }
+                        &:last-child{
+                            order: 3;
+                            width: 50px;
+                            color: $white;
+                            position: relative;
+                            &::after{
+                                top: 50%;
+                                left: 50%;
+                                color: $grey;
+                                content: '\f054';
+                                position: absolute;
+                                font-weight: 900;
+                                @include translate(-50%, -50%);
+                                @extend .custom-fontawesome;
+                            }
+                        }
+                    }
+                }
+                &:last-of-type{
+                    > button:focus{
+                        color: $grey;
+                        width: 100px;
+                        border: 0;
+                        height: 44px;
+                        cursor: pointer;
+                        border: 1px solid $table-border-color;
+                        padding: 0;
+                        font-size: 14px;
+                        @include box-shadow(none);
+                        @include transition(all 0.3s ease-in-out);
+                        @extend .lato-regular;
+                    }
+                    > button{
+                        color: $grey;
+                        width: 100px;
+                        border: 0;
+                        height: 44px;
+                        cursor: pointer;
+                        border: 1px solid $table-border-color;
+                        padding: 0;
+                        font-size: 14px;
+                        @include box-shadow(none);
+                        @include transition(all 0.3s ease-in-out);
+                        @extend .lato-regular;
+                        &.rbc-active{
+                            color: $brand-primary;
+                            border-color: $primary-border;
+                            background-color: $primary-bg;
+                        }
+                        &:hover{
+                            border-color: $primary-border;
+                            background-color: transparent;
+                        }
+                        &:nth-child(2){
+                            &.rbc-active{
+                                + button:nth-child(3){
+                                    border-left-color: $primary-border;
+                                }
+                            }
+                        }
+                        &:nth-child(3){
+                            margin-right: -1px;
+                        }
+                        &:first-of-type,
+                        &:last-of-type{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .rbc-time-view{
+            border-color: $table-border-color;
+            background-color: $white;
+            .rbc-time-header{
+                border-right: 0;
+                background-color: $table-row-alt-bg;
+                .rbc-label{
+                    width: 80px !important;
+                    min-width: 80px !important;
+                    max-width: 80px !important;
+                }
+                .rbc-time-header-content{
+                    .rbc-row{
+                        &.rbc-time-header-cell-single-day{
+                            display: inline-block;
+                        }
+                        .rbc-header{
+                            height: 58px;
+                            display: flex;
+                            align-items: center;
+                            border-bottom: 0;
+                            justify-content: center;
+                            &.rbc-today{
+                                > a{
+                                    span{
+                                        color: #eaf6ff;
+                                        position: relative;
+                                        @extend .lato-bold;
+                                        &::after{
+                                            top: 50%;
+                                            left: 50%;
+                                            color: $brand-secondary;
+                                            content: 'Today';
+                                            position: absolute;
+                                            font-size: 14px;
+                                            @include translate(-50%,-50%);
+                                            @extend .lato-bold;
+                                        }
+                                    }
+                                }
+                            }
+                            > a{
+                                span{
+                                    color: $grey;
+                                    font-size: 14px;
+                                    @extend .lato-regular;
+                                }
+                            }
+                        }
+                    }
+                    .rbc-allday-cell{
+                        display: none;
+                    }
+                }
+            }
+            .rbc-time-content{
+                .rbc-time-column{
+                    .rbc-timeslot-group{
+                        // border-bottom: 0;
+                        .rbc-time-slot{
+                            border-top: 0;
+                        }
+                    }
+                    &.rbc-time-gutter {
+                        .rbc-timeslot-group{
+                            width: 80px !important;
+                            min-width: 80px !important;
+                            max-width: 80px !important;
+                            .rbc-time-slot{
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                &:last-of-type{
+                                    display: none;
+                                }
+                                .rbc-label{
+                                    color: $grey;
+                                    font-size: 14px;
+                                    @extend .lato-regular;
+                                }
+                            }
+                        }
+                    }
+                    &.rbc-day-slot{
+                        &:not(:first-of-type){
+                            .rbc-timeslot-group{
+                                // border-left: 0;
+                            }
+                            .rbc-events-container{
+                                // border-left: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
